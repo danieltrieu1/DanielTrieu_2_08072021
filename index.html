@@ -16,39 +16,91 @@
 
 <header>
 
-    <div class="logo"><img src="images/logo/Reservia.svg" alt="Logo d'Accueil"></div>
     
-        <ul id="menu">
-            <li><button><img src="">Hébergements</button></li>
-            <li><button><img src="">Activités</button></li>
-            <li><button><img src="">S'inscrire</button></li>
-        </ul>
+        <div id="main-menu">
+            <div class="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"></div>
+            <ul class="menu-list">
+            <li><a class="menu-cat">
+                <span class="filter-title">Hébergements</span></a>
+            </li>
+
+            <li><a class="menu-cat">
+                <span class="filter-title">Activités</span></a>
+            </li>
+
+            <li><a class="menu-cat">
+                <span class="filter-title">S'inscrire</span></a>
+            </li></ul>
+        </div>
 
 
 
 
-        <section class="slogan">
+        <span class="slogan">
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
-        </section>
+        </span>
 
 
 
 
 
-    <div class="search-bar">Rechercher</div>
+    <div class="search-bar">
+        <div class="marker-icon"><i class="fas fa-map-marker-alt fa-sm"></i></div>
+        <div class="input-search"><input type="search">Marseille, France</div>
+        <button class="search-button">Rechercher</button>
+    </div>
 
 
     <section class="filter">
-        <ul id="filter-list"><div>Filtres</div>
-            <li><div class="filter-button"><button>
-                </button>Economique</div></li>
-            <li><button class="filter-button"><img src="">Familiale</button></li>
-            <li><button class="filter-button"><img src="">Romantique</button></li>
-            <li><button class="filter-button"><img src="">Animaux Autorisés</button></li>
-        </ul></section>
 
-    <section class="info"><p>Plus de 500 logements sont disponibles dans cette ville</p></section>
+        <ul id="filter-list">
+            
+            <span class="filter-title">Filtres</span>
+
+            <li><a class="filter-container">
+                        <div class="filter-icon">
+                           <i style="margin: 0;" class="fas fa-money-bill-wave"></i>
+                       </div>
+                       <span class="filter-title">Economique</span>   
+                    </a></li>
+
+            <li><a class="filter-container">
+                        <div class="filter-icon">
+                           <i style="margin: 0;" class="fas fa-child"></i>
+                       </div>
+                       <span class="filter-title">Familial</span>   
+                    </a></li>
+
+
+            <li><a class="filter-container">
+                <div class="filter-icon">
+                   <i style="margin: 0;" class="fas fa-heart"></i>
+               </div>
+               <span class="filter-title">Romantique</span>   
+            </a></li>
+
+
+            <a class="filter-container">
+                <div class="filter-icon">
+                   <i style="margin: 0;" class="fas fa-dog"></i>
+               </div>
+               <span class="filter-title">Animaux Autorisés</span>   
+            </a>
+        </ul>
+
+    </section>
+
+
+
+   
+
+
+
+    <div class="info">
+        <div class="info-icon"><i class="fas fa-info fa-xs"></i></div>
+            <span>Plus de 500 logements sont disponibles dans cette ville</span>
+        </div>
 
 
 </header>
@@ -124,12 +176,7 @@
             <i class="fas fa-star fa-xs" style="color: #0065FC"></i>
         </div></div>
 
-    <!-- <div class=hebergement-img><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge La Cannebière"><a href="hebergement-card">Auberge la Cannebière</a></div>
-    <div class=hebergement-img><img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du Port"><a href="hebergement-card">Hôtel du port</a></div>
-    <div class=hebergement-img><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les Mouettes"><a href="hebergement-card">Hôtel Les mouettes</a></div>
-    <div class=hebergement-img><img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la Mer"><a href="hebergement-card">Hôtel de la mer</a></div>
-    <div class=hebergement-img><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier"><a href="hebergement-card">Le Panier</a></div>
-    <div class=hebergement-img><img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel Chez Amina"><a href="hebergement-card">Hôtel chez Amina</a></div> -->
+   
     <p><a href="showmore">Afficher plus</a></p>   
 </div>
 
