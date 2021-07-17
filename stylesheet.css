@@ -57,6 +57,7 @@ ul, h2, p, div {
 
 .search-bar [type=text] {
     font-family: "Raleway",serif;
+    font-weight: bolder;
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
@@ -194,6 +195,11 @@ ul, h2, p, div {
     box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
 }
 
+.house-box > div:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
+
 .house-card {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -202,6 +208,7 @@ ul, h2, p, div {
 }
 
 .house-card > img {
+    /* visibility: hidden; */
     position: absolute;
     object-fit: cover;
     height: 6rem;
@@ -214,8 +221,17 @@ ul, h2, p, div {
     grid-area: 2 / 1 / 2 /1;
 }
 
+.house-card > div{
+    display: flex;
+    align-items: flex-end;
+    grid-area: 2 / 1 ;
+    /* border: solid red; */
+}
 
-
+.showmore {
+    text-decoration: solid;
+    text-decoration-color: black;
+}
 
 
 .popu-aside {
@@ -243,7 +259,8 @@ ul, h2, p, div {
 
 .popu-card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
 }
 
 .popu-card > img {
@@ -264,9 +281,17 @@ ul, h2, p, div {
     padding: 0.5rem;
 }
 
+.popu-rate-star {
+    display: flex;
+    justify-items: flex-start;
+    padding: 0.5rem;
+    grid-area: 3 /2;
+}
 
-
-
+.popu-aside > div:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
 
 
 .activite {
