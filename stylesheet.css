@@ -36,10 +36,11 @@ ul, h2, p, div {
     /* border: 2px solid orange; */
 }
 
-.filter-title:hover {
+.menu-cat:hover {
     color: #0065FC;
     font-weight: bold;
-
+    border-top: 1vh solid #0065FC;
+    padding-top: 2rem;
 
 }
 
@@ -114,25 +115,10 @@ ul, h2, p, div {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .filter-container{
     display: flex;
     align-items: center;
+    font-weight: bolder;
     border: 0.15rem solid #dadada;
     border-radius: 2rem;
     width: 100%;
@@ -275,8 +261,8 @@ ul, h2, p, div {
 
 .popu-subtitle {
     grid-area: 1 / 2 / 1 / 2 ;
+    gap: 1rem;
     padding: 0.5rem;
-    
 }
 
 
