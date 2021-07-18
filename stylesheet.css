@@ -40,7 +40,6 @@ ul, h2, p, div {
     font-weight: bold;
     border-top: 1vh solid #0065FC;
     padding-top: 2rem;
-
 }
 
 
@@ -61,7 +60,7 @@ ul, h2, p, div {
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
-    border: 1px solid #F2F2F2;
+    border: 2px solid #f0f0f0;
     float: left;
     background: white;
   }
@@ -115,24 +114,79 @@ ul, h2, p, div {
 
 
 
-.filter-container{
-    display: flex;
+
+
+.filter > ul{
+    /* border: solid yellow; */
+    width: fit-content;
     align-items: center;
-    font-weight: bolder;
-    border: 0.15rem solid #dadada;
+}
+
+.filter{
+}
+
+#filter-list > li{
+    display: inline-block;
+    padding-right: 1rem;
+    /* border: solid red; */
+}
+
+.filter-container{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border: 2px solid #f0f0f0; 
     border-radius: 2rem;
-    width: 100%;
-
-
 
 }
 
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+    width: 1rem;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+}
+
+.filter-container:hover{
+    color: #0065FC;
+}
+
+.filter-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 #filter-list {
-    display: grid;
-    list-style: none;
-    grid-template-columns: 2rem 11rem 9rem 11rem 14rem;
-    gap: 2rem;
+
+    height: 2rem;
     width: 100%;
+    gap: 2rem;
+    list-style: none;
+}
+
+#filter-list > li{
+    height: 3rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 2px solid red;
 }
 
 #filter-list > span {
@@ -154,7 +208,7 @@ ul, h2, p, div {
 .filter-title{
     padding-left: 1rem;
 }
-
+ */
 
 
 
@@ -230,7 +284,6 @@ ul, h2, p, div {
 
 .showmore {
     text-decoration: solid;
-    text-decoration-color: black;
 }
 
 
