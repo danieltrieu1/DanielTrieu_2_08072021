@@ -1,3 +1,5 @@
+/* general */
+
 body {
     margin: 0;
     padding: 3rem;
@@ -122,8 +124,6 @@ ul, h2, p, div {
     align-items: center;
 }
 
-.filter{
-}
 
 #filter-list > li{
     display: inline-block;
@@ -156,6 +156,7 @@ ul, h2, p, div {
 
 .filter-title{
     display: flex;
+    font-weight: bold;
     justify-content: center;
     flex-direction: column;
     padding-right: 1rem;
@@ -163,52 +164,6 @@ ul, h2, p, div {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* 
-#filter-list {
-
-    height: 2rem;
-    width: 100%;
-    gap: 2rem;
-    list-style: none;
-}
-
-#filter-list > li{
-    height: 3rem;
-    width: 100%;
-    border-radius: 2rem;
-    border: 2px solid red;
-}
-
-#filter-list > span {
-    display: flex;
-    align-items: center;
-}
-
-.filter-icon{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 1rem;
-    width: 1rem;
-    color: #0065FC;
-    background-color: #DEEBFF;
-    border-radius: 50%;
-}
-
-.filter-title{
-    padding-left: 1rem;
-}
- */
 
 
 
@@ -477,14 +432,19 @@ ul, h2, p, div {
 
 
 
-
-
-.bottom-info{
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 1;
+    width: 100%;
     background-color: #F2F2F2;
+}
+
+.footer-info{
     display: grid;
-    padding-top: 2rem;
-    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+    gap: 2rem;
 }
 
 
