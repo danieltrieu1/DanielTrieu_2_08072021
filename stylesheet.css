@@ -35,7 +35,7 @@ h2 {
 #main-menu{
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid red;  */ */
+    /* border: 2px solid red;  */
 
 }
 
@@ -144,30 +144,18 @@ h2 {
 
 
 
-
-
-
 .filter{
     font-family: "raleway",sans-serif;
     font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.filter > span{
-
-}
-
-.filter > ul{
-    padding: 0;
+    cursor: pointer;
 }
 
 
 #filter-list > li{
     display: inline-block;
-    padding-left: 0;
     padding-right: 0.5rem;
     /* border: solid red; */
 }
@@ -238,6 +226,7 @@ h2 {
     background-color: white;
     border: 0.25rem solid white;
     box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
+    cursor: pointer;
 }
 
 .house-box > a:hover {
@@ -262,6 +251,17 @@ h2 {
     justify-content: space-between;
 }
 
+.house-subtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.rate-star{
+    display: flex;
+    padding-top: 1rem;
+}
 
 .showmore {
 
@@ -301,6 +301,7 @@ h2 {
     box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
     border-radius: 1rem;
     height: 8rem;
+    cursor: pointer;
 }
 
 
@@ -319,17 +320,22 @@ h2 {
     border-bottom-left-radius: 0.8rem;
 }
 
-
+.popu-title{ /*icone titre popu */
+    display: flex;
+    justify-content: space-between;
+}
 
 .popu-subtitle {
     grid-area: 1 / 2 / 1 / 2 ;
-    gap: 1rem;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .popu-rate-star {
     display: flex;
     grid-area: 3 /2;
+    margin-top: auto;
 }
 
 .popu-aside > a:hover {
@@ -508,17 +514,30 @@ h2 {
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 500px) {
   
     /* Appareils avec une résolution de 1024 pixels ou moins */
 
-.logo{
-}
 
 #main-menu{
     display: flex;
-    flex-direction: column;
-    justify-self: center;
+    justify-content: space-between;
+    /* border: solid orange; */
+
+}
+
+.menu-cat{
+    /* border: solid green; */
+    display: inherit;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+
+}
+
+.menu-cat:hover{
+    border-top: none;
+    border-bottom: 1px solid blue;
 
 }
 
@@ -527,8 +546,44 @@ h2 {
 
 }
 
+
+.search-bar{
+    grid-template-columns: 3rem 20rem 8rem;
+}
+
+::placeholder{
+    font-size: 0;
+}
+
+.search-button{
+    display: inline-block;
+    border-radius: 2vh;
+    font-size: 0;
+    text-indent: 1000px;
+    width: 9vh;
+}
+
+
+
+
+
+
+
+
+
 .filter{
     display: block;
+    /* border: solid red; */
+}
+
+.filter > h3{
+    
+}
+
+
+.filter > ul{
+    /* border: solid red; */
+    padding-left: 0;    
 }
 
 #filter-list > li{
@@ -536,44 +591,11 @@ h2 {
 }
 
 .info{
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 
 
-.menu-cat{
-    display: grid;
-    grid-template-rows: 2fr;
-}
-
-.house-box{
-    display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-.search-bar button{
-    display: block;
-    font-size: 0;
-    text-indent: 1000px;
-    width: 9vh;   
-}
-
-.search-bar button {
-
-}
-.search-bar button:after{
-    
-
-}
 
 
 
@@ -583,20 +605,74 @@ h2 {
     grid-template-columns: 1fr;
 }
 
+.house-box{
+    display: block;
+}
+
+.house-box > h2{
+    margin-bottom: 2rem;
+}
+
+.house-card{
+    display: block;
+    margin-bottom: 2rem;
+
+}
+
+
+
+
 .popu-aside{
     order: -1;
 }
 
+
+
 .activite {
     display: block;
+
+
 }
 
 .activite > a{
-    display: grid;
-    grid-template-rows: repeat(6,1fr);
-    height: 10rem;
-    gap: 12rem;
+    height: 14rem;
+    margin-bottom: 2rem;
+
 }
+
+#act-un > img{
+    height: 11rem;
+}
+
+#act-deux > img{
+    height: 11rem;
+
+}
+
+#act-trois > img{
+    height: 11rem;
+
+}
+
+#act-quatre > img{
+    height: 11rem;
+
+}
+
+#act-cinq > img{
+    height: 11rem;
+}
+
+#act-six > img{
+    height: 11rem;
+
+}
+
+
+
+
+
+
 
 .footer-info{
     display: flex;
@@ -606,4 +682,4 @@ h2 {
 
    }
 
-
+}
