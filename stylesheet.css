@@ -263,9 +263,16 @@ h2 {
     padding-top: 1rem;
 }
 
-.showmore {
 
+.showmore:link{
+    font-weight: bold;
+    text-decoration-line: none;
 }
+
+.showmore:visited {
+    color: black;
+}
+
 
 
 
@@ -450,7 +457,6 @@ h2 {
     display: grid;
     grid-template-rows: 1fr 3rem;
     grid-area: 1 / 4 / 1 / 5;
-    height: auto;
 } 
 
 #act-cinq > img {
@@ -513,11 +519,23 @@ h2 {
     font-weight: bold;
 }
 
+a:link {
+    text-decoration-line: none;
+}
 
-@media only screen and (max-width: 500px) {
+a:visited {
+    color: black;
+
+}
+
+
+@media only screen and (max-width: 1024px) {
   
     /* Appareils avec une résolution de 1024 pixels ou moins */
 
+body{
+    overflow-x: hidden;
+}
 
 #main-menu{
     display: flex;
