@@ -22,11 +22,17 @@ h2 {
     margin: 0;
 }
 
-/* header */
+a:link {
+    text-decoration-line: none;
+}
 
+a:visited {
+    color: black;
+}
+
+/*---------------------- header ----------------------*/
 
 .logo {
-
     /* border: solid red; */
     padding-top: 1rem;
     width: 6rem;
@@ -36,7 +42,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     /* border: 2px solid red;  */
-
 }
 
 .menu-list{
@@ -50,8 +55,6 @@ h2 {
 .menu-cat{
     padding-top: 2rem;
     /* border: solid red; */
-
-
 }
 
 .menu-cat:hover {
@@ -64,18 +67,13 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     /* border: solid red; */
-
 }
 
-
-
-
-
-
+/*--------------------------------------------------------*/
 
 .search-bar {
     display: grid;
-    grid-template-columns: 3rem 14rem 8rem;
+    grid-template-columns: 3.2rem 14rem 8rem 1fr;
     margin-top: 2rem;
     margin-bottom: 2rem;
     }
@@ -83,36 +81,33 @@ h2 {
 
 .search-bar [type=text] {
     font-family: "Raleway",serif;
-    font-weight: bolder;
+    font-weight: bold;
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
     border: 2px solid #f0f0f0;
-    float: left;
     background: white;
   }
 
   
-.search-bar button {
-    float: left;
-    padding: 1rem;
+.search-button {
     background: #0065FC;
     color: white;
     font-size: 17px;
     border: none;
-    border-left: none; 
+    border-left: none; /* mini marge invisible du bouton */
     border-top-right-radius: 2vh;
     border-bottom-right-radius: 2vh;
     cursor: pointer;
   }
 
-  ::placeholder{
+::placeholder{
       font-family: "Raleway",serif;
       font-weight: bold;
       color: black;
   }
 
-  .marker-icon{
+.marker-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,41 +117,30 @@ h2 {
     border-bottom-left-radius: 2vh;
 }
 
-
-
-
-
-
-.info {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.search-button i{
+    display: none;
 }
 
-    .info-icon{
-    display: inline;
-    color: #0065FC;
-    border: 1px solid #dadada;
-    background-color: white;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    border-radius: 50%;
-}
-
-
+/*--------------------------------------------------------*/
 
 .filter{
     font-family: "raleway",sans-serif;
     font-weight: bold;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    cursor: pointer;
 }
 
+.filter > p {
+    display: inline-block;
+    margin-right: -1.5rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
 
 #filter-list > li{
     display: inline-block;
     padding-right: 0.5rem;
+    cursor: pointer;
     /* border: solid red; */
 }
 
@@ -190,14 +174,24 @@ h2 {
     padding-left: 1rem;
 }
 
+/*--------------------------------------------------------*/
 
+.info {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
+.info-icon{
+    display: inline;
+    color: #0065FC;
+    border: 1px solid #dadada;
+    background-color: white;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    border-radius: 50%;
+}
 
-
-
-
-
-/* main */
+/*------------------------ main ------------------------- */
 
 .house-container {
     display: grid;
@@ -266,28 +260,9 @@ h2 {
 
 .showmore:link{
     font-weight: bold;
-    text-decoration-line: none;
 }
 
-.showmore:visited {
-    color: black;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*------------------------------------------------------*/
 
 .popu-aside {
     
@@ -327,7 +302,7 @@ h2 {
     border-bottom-left-radius: 0.8rem;
 }
 
-.popu-title{ /*icone titre popu */
+.popu-title{ /*icône titre popu */
     display: flex;
     justify-content: space-between;
 }
@@ -350,22 +325,7 @@ h2 {
     transform: scale(0.95);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*------------------------------------------------------*/
 
 .activite {
     display: grid;
@@ -404,7 +364,6 @@ h2 {
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-
 }
 
 #act-deux {
@@ -494,9 +453,7 @@ h2 {
     padding-left: 2vh;
 }
 
-
-
-
+/*------------------------------------------------------*/
 
 .footer{
     position: absolute;
@@ -509,7 +466,8 @@ h2 {
 .footer-info{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     gap: 2rem;
 }
 
@@ -519,19 +477,9 @@ h2 {
     font-weight: bold;
 }
 
-a:link {
-    text-decoration-line: none;
-}
-
-a:visited {
-    color: black;
-
-}
-
 
 @media only screen and (max-width: 1024px) {
-  
-    /* Appareils avec une résolution de 1024 pixels ou moins */
+/* Appareils avec une résolution de 1024 pixels ou moins */
 
 body{
     overflow-x: hidden;
@@ -541,63 +489,52 @@ body{
     display: flex;
     justify-content: space-between;
     /* border: solid orange; */
-
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 2rem;
 }
 
 .menu-cat{
     /* border: solid green; */
     display: inherit;
-    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     margin-top: 1rem;
-
-
 }
 
 .menu-cat:hover{
     border-top: none;
     border-bottom: 1px solid blue;
-
 }
 
 .subscribe-button{
+    padding-right: 2rem;
     /* border: solid red; */
-
 }
 
+/*------------------------------------------------------*/
 
 .search-bar{
-    grid-template-columns: 3rem 20rem 8rem;
+    grid-template-columns: 3.2rem 1fr 3.5rem 1rem;
 }
 
 ::placeholder{
     font-size: 0;
 }
 
-.search-button{
-    display: inline-block;
-    border-radius: 2vh;
-    font-size: 0;
-    text-indent: 1000px;
-    width: 9vh;
+.search-button > span{
+    display: none;
 }
 
+.search-button i{
+    display: flex;
+    justify-content: center;
+}
 
-
-
-
-
-
-
+/*------------------------------------------------------*/
 
 .filter{
     display: block;
     /* border: solid red; */
 }
-
-.filter > h3{
-    
-}
-
 
 .filter > ul{
     /* border: solid red; */
@@ -608,16 +545,13 @@ body{
     padding-bottom: 1rem;
 }
 
+/*------------------------------------------------------*/
+
 .info{
     margin-top: 2rem;
 }
 
-
-
-
-
-
-
+/*------------------------------------------------------*/
 
 .house-container{
     grid-template-columns: 1fr;
@@ -634,28 +568,22 @@ body{
 .house-card{
     display: block;
     margin-bottom: 2rem;
-
 }
 
-
-
+/*------------------------------------------------------*/
 
 .popu-aside{
     order: -1;
 }
-
-
+/*------------------------------------------------------*/
 
 .activite {
     display: block;
-
-
 }
 
 .activite > a{
     height: 14rem;
     margin-bottom: 2rem;
-
 }
 
 #act-un > img{
@@ -664,17 +592,14 @@ body{
 
 #act-deux > img{
     height: 11rem;
-
 }
 
 #act-trois > img{
     height: 11rem;
-
 }
 
 #act-quatre > img{
     height: 11rem;
-
 }
 
 #act-cinq > img{
@@ -683,14 +608,9 @@ body{
 
 #act-six > img{
     height: 11rem;
-
 }
 
-
-
-
-
-
+/*------------------------------------------------------*/
 
 .footer-info{
     display: flex;
@@ -698,6 +618,5 @@ body{
     justify-content: space-between;
 }
 
-   }
-
 }
+
