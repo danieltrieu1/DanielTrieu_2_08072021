@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap');
 
-
 /* general */
 
 body {
@@ -149,12 +148,13 @@ a:link {
     display: inline-block;
     margin-right: -1.5rem;
     margin-top: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #filter-list > li {
     display: inline-block;
     padding-right: 1rem;
+    padding-bottom: 1rem;
     cursor: pointer;
 }
 
@@ -191,7 +191,7 @@ a:link {
 /*--------------------------------------------------------*/
 
 .info {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -593,11 +593,13 @@ h2, p {
 
 .filter {
     display: block;
+
 }
 
 .filter > ul {
     padding-left: 2rem;
-    padding-right: 2rem;}
+    padding-right: 2rem;
+}
 
 #filter-list > li {
     padding-bottom: 1rem;
@@ -615,6 +617,7 @@ h2, p {
 
 .house-container {
     grid-template-columns: 1fr;
+    padding-top: 0;
 }
 
 .house-box {
