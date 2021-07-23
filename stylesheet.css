@@ -161,7 +161,7 @@ a:link {
 .filter-container {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    border: 2px solid #f0f0f0; 
+    border: 2px solid #f0f0f0;
     border-radius: 2rem;
 }
 
@@ -617,7 +617,6 @@ h2, p {
 
 .house-container {
     grid-template-columns: 1fr;
-    padding-top: 0;
 }
 
 .house-box {
