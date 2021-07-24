@@ -141,14 +141,12 @@ a:link {
     font-family: "raleway",sans-serif;
     font-weight: bold;
     display: flex;
-    align-items: center;
 }
 
 .filter > p {
-    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-right: -1.5rem;
-    margin-top: auto;
-    margin-bottom: 2rem;
 }
 
 #filter-list > li {
@@ -191,18 +189,23 @@ a:link {
 /*--------------------------------------------------------*/
 
 .info {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
 }
 
-.info-icon {
-    display: inline;
-    color: #0065FC;
-    border: 1px solid #dadada;
-    background-color: white;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
+.info i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5px;
+    padding: 5px;
+    width: 5px;
+    border: 2px solid #f0f0f0;
     border-radius: 50%;
+    color: #0065FC;
 }
 
 /*------------------------ main ------------------------- */
@@ -211,7 +214,7 @@ a:link {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    padding-bottom: 3rem ;
+    padding-bottom: 2rem ;
 }
 
 .house-box { 
@@ -279,7 +282,7 @@ a:link {
 .popu-aside {
     
     display: grid;
-    grid-template-rows: 2rem repeat(3,1fr); 
+    grid-template-rows: auto repeat(3,1fr); 
     background-color: #F2F2F2;
     border-radius: 1rem;
     margin: 0;
@@ -469,6 +472,7 @@ a:link {
     left: 0;
     width: 100%;
     background-color: #F2F2F2;
+    line-height: 2rem;
 }
 
 .footer-info {
@@ -480,7 +484,6 @@ a:link {
 }
 
 .footer-info > p {
-    margin: 0;
     font-family: "raleway",sans-serif;
     font-weight: bold;
 }
@@ -522,9 +525,7 @@ h2, p {
 
 #menu a:hover {
     padding: 0;
-    border-top: none;
-    color: #0065FC;
-    
+    border-top: none;  
 }
 
 .houses {
@@ -537,7 +538,6 @@ h2, p {
 }
 
 .houses:hover {
-    color: #0065FC;
     border-bottom: 4px solid #0065FC;
 }
 
@@ -551,7 +551,6 @@ h2, p {
 }
 
 .activites:hover {
-    color: #0065FC;
     border-bottom: 4px solid #0065FC;
 }
 
@@ -593,7 +592,6 @@ h2, p {
 
 .filter {
     display: block;
-
 }
 
 .filter > ul {
@@ -610,7 +608,11 @@ h2, p {
 .info {
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-top: 2rem;
+    gap: 0;
+}
+
+.info i {
+    position: absolute;
 }
 
 /*------------------------------------------------------*/
@@ -639,6 +641,7 @@ h2, p {
 .popu-aside {
     border-radius: 0;
     order: -1;
+    background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,0) 100%);
 }
 
 .popu-title > h2 {
@@ -690,7 +693,6 @@ h2, p {
 .footer-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 }
