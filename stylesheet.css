@@ -493,7 +493,7 @@ a:link {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 /* Appareils avec une résolution de 1024 pixels ou moins */
 
 body {
@@ -504,6 +504,7 @@ body {
 
 h2, p {
     padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .logo {
@@ -525,7 +526,7 @@ h2, p {
 
 #menu a:hover {
     padding: 0;
-    border-top: none;  
+    border-top: none; 
 }
 
 .houses {
@@ -533,7 +534,6 @@ h2, p {
     display: flex;
     justify-content: center;
     padding-top: 0;
-    padding-bottom: 1rem;
     border-bottom: 4px solid #f0f0f0;
 }
 
@@ -642,6 +642,7 @@ h2, p {
     border-radius: 0;
     order: -1;
     background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,0) 100%);
+    margin-bottom: -2rem;
 }
 
 .popu-title > h2 {
