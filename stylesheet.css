@@ -29,17 +29,22 @@ a:link {
 
 /*---------------------- header ----------------------*/
 
-.logo {
-    padding-top: 1rem;
+#logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 6rem;
+}
+
+.title h2 {
+    margin-bottom: 0.5rem;
 }
 
 #menu {
     display: grid;
     grid-template-columns: auto 1fr repeat(2,auto) auto;
     font-family: "Raleway",sans-serif;
-    cursor: pointer;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 #menu a {
@@ -76,15 +81,20 @@ a:link {
     border-top: 4px solid #0065FC;
 }
 
-.subscribe-button {
+#subscribe-button {
     grid-area: 1 / 5;
 }
 
-.subscribe-button a {
+#subscribe-button a {
     display: flex;
     justify-content: flex-end;
     color: #0065FC;
     font-weight: bold;
+}
+
+#subscribe-button a:hover {
+    color: #0055FC;
+
 }
 
 /*--------------------------------------------------------*/
@@ -92,7 +102,7 @@ a:link {
 .search-bar {
     display: grid;
     grid-template-columns: 3.2rem 14rem 8rem 1fr;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -115,6 +125,11 @@ a:link {
     border-top-right-radius: 2vh;
     border-bottom-right-radius: 2vh;
     cursor: pointer;
+}
+
+.search-button:hover {
+    background: #0055FC;
+
 }
 
 ::placeholder {
@@ -178,6 +193,8 @@ a:link {
 
 .filter-container:hover {
     color: #0065FC;
+    border: 2px solid #DEEBFF;
+
 }
 
 .filter-title {
@@ -192,31 +209,37 @@ a:link {
 
 .info {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    gap: 5px;
 }
 
 .info i {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 5px;
-    padding: 5px;
-    width: 5px;
-    border: 2px solid #f0f0f0;
+    align-items: center;
+    padding: 7px;
+    height: 7px;
+    width: 7px;
+    border: 1px solid #f0f0f0;
     border-radius: 50%;
     color: #0065FC;
 }
 
+.info p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 /*------------------------ main ------------------------- */
 
 .house-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    padding-bottom: 2rem ;
+    margin-bottom: 3rem ;
 }
 
 .house-box { 
@@ -472,9 +495,9 @@ a:link {
 .footer {
     position: absolute;
     left: 0;
-    width: 100%;
     background-color: #F2F2F2;
-    line-height: 2rem;
+    width: 100%;
+    line-height: 2rem; /* espacements lignes */
 }
 
 .footer-info {
@@ -482,6 +505,11 @@ a:link {
     grid-template-columns: repeat(3, 1fr);
     padding-top: 3rem;
     padding-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 2rem;
 }
 
@@ -494,209 +522,228 @@ a:link {
     color: black;
 }
 
+.footer ul {
+    padding-left: 0;
+}
 
 @media only screen and (max-width: 700px) {
 /* Appareils avec une résolution de 1024 pixels ou moins */
 
-body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    h2, p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #logo {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #subscribe-button {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #menu {
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 2rem;
+        gap: 0;
+
+    }
+
+    #menu a:hover {
+        padding: 0;
+        border-top: none;
+    }
+
+    #houses {
+        grid-area: 2 / 1;
+        padding-top: 0;
+        width: 100%;
+        height: 2rem; /*espacement border et text */
+        border-bottom: 4px solid #f0f0f0;
+    }
+
+    #houses a {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #houses:hover {
+        border-bottom: 4px solid #0065FC;
+    }
+
+    #activites {
+        grid-area: 2 / 2;
+        padding-top: 0;
+        border-bottom: 4px solid #f0f0f0;
+        /* border: solid orange; */
+    }
+
+    #activites a {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #activites:hover {
+        border-bottom: 4px solid #0065FC;
+    }
+
+    #subscribe-button {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: 1 / 2;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /*------------------------------------------------------*/
+
+    .search-bar {
+        grid-template-columns: 3.2rem 1fr 3.5rem auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    ::placeholder {
+        font-size: 0;
+    }
+
+    .search-button {
+        border-top-left-radius: 2vh;
+        border-bottom-left-radius: 2vh;
+    }
+
+    .search-button:hover {
+        background-color: #0055FC;
+    }
+
+    .search-button > span {
+        display: none;
+    }
+
+    .search-button i {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*------------------------------------------------------*/
+
+    .filter {
+        display: block;
+    }
+
+    .filter > ul {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #filter-list > li {
+        padding-bottom: 1rem;
+    }
+
+    /*------------------------------------------------------*/
+
+    .info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 0;
+    }
+
+    .info i {
+        position: absolute;
+    }
+
+    /*------------------------------------------------------*/
+
+    .house-container {
+        grid-template-columns: 1fr;
+    }
+
+    .house-box {
+        display: block;
+        background: none;
+    }
+
+    .house-box > h2 {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .house-card {
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    /*------------------------------------------------------*/
+
+    .popu-aside {
+        border-radius: 0;
+        order: -1;
+        background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,0) 100%);
+        margin-bottom: -2rem;
+    }
+
+    .popu-title > h2 {
+        padding: 0;
+    }
+
+    /*------------------------------------------------------*/
+
+    .activite {
+        display: block;
+        padding: 2rem;
+    }
+
+    .activite > a {
+        height: 14rem;
+        margin-bottom: 2rem;
+    }
+
+    #act-un > img {
+        height: 11rem;
+    }
+
+    #act-deux > img {
+        height: 11rem;
+    }
+
+    #act-trois > img {
+        height: 11rem;
+    }
+
+    #act-quatre > img {
+        height: 11rem;
+    }
+
+    #act-cinq > img {
+        height: 11rem;
+    }
+
+    #act-six > img {
+        height: 11rem;
+    }
+
+    /*------------------------------------------------------*/
+
+    .footer {
+        margin-top: -1rem;
+    }
+
+    .footer-info{
+        display: flex;
+        flex-direction: column;
+    }
 }
-
-h2, p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-#logo {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.subscribe-button {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-#menu {
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    margin-bottom: 2rem;
-    gap: 0;
-}
-
-#menu a:hover {
-    padding: 0;
-    border-top: none; 
-}
-
-#houses {
-    grid-area: 2 / 1;
-    display: flex;
-    justify-content: center;
-    padding-top: 0;
-    border-bottom: 4px solid #f0f0f0;
-}
-
-#houses:hover {
-    border-bottom: 4px solid #0065FC;
-}
-
-#activites {
-    grid-area: 2 / 2;
-    display: flex;
-    justify-content: center;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    border-bottom: 4px solid #f0f0f0;
-}
-
-#activites:hover {
-    border-bottom: 4px solid #0065FC;
-}
-
-.subscribe-button {
-    display: flex;
-    justify-content: flex-end;
-    grid-area: 1 / 2;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/*------------------------------------------------------*/
-
-.search-bar {
-    grid-template-columns: 3.2rem 1fr 3.5rem auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-::placeholder {
-    font-size: 0;
-}
-
-.search-button {
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius: 2vh;
-}
-
-.search-button > span {
-    display: none;
-}
-
-.search-button i {
-    display: flex;
-    justify-content: center;
-}
-
-/*------------------------------------------------------*/
-
-.filter {
-    display: block;
-}
-
-.filter > ul {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-#filter-list > li {
-    padding-bottom: 1rem;
-}
-
-/*------------------------------------------------------*/
-
-.info {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 0;
-}
-
-.info i {
-    position: absolute;
-}
-
-/*------------------------------------------------------*/
-
-.house-container {
-    grid-template-columns: 1fr;
-}
-
-.house-box {
-    display: block;
-    background: none;
-}
-
-.house-box > h2 {
-    padding: 0;
-    margin-bottom: 2rem;
-}
-
-.house-card {
-    display: block;
-    margin-bottom: 2rem;
-}
-
-/*------------------------------------------------------*/
-
-.popu-aside {
-    border-radius: 0;
-    order: -1;
-    background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,0) 100%);
-    margin-bottom: -2rem;
-}
-
-.popu-title > h2 {
-    padding: 0;
-}
-
-/*------------------------------------------------------*/
-
-.activite {
-    display: block;
-    padding: 2rem;
-}
-
-.activite > a {
-    height: 14rem;
-    margin-bottom: 2rem;
-}
-
-#act-un > img {
-    height: 11rem;
-}
-
-#act-deux > img {
-    height: 11rem;
-}
-
-#act-trois > img {
-    height: 11rem;
-}
-
-#act-quatre > img {
-    height: 11rem;
-}
-
-#act-cinq > img {
-    height: 11rem;
-}
-
-#act-six > img {
-    height: 11rem;
-}
-
-/*------------------------------------------------------*/
-
-.footer {
-    margin-top: -1rem;
-}
-
-.footer-info{
-    display: flex;
-    flex-direction: column;
-}
-
-}
-
