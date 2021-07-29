@@ -308,6 +308,7 @@ a:link {
     
     display: grid;
     grid-template-rows: auto repeat(3,1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     background-color: #F2F2F2;
     border-radius: 1rem;
     margin: 0;
