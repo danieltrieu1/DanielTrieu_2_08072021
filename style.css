@@ -653,6 +653,8 @@ a:link {
 
     #filter-list > li {
         padding-bottom: 1rem;
+        padding-right: 0.5rem;
+
     }
 
     /*------------------------------------------------------*/
