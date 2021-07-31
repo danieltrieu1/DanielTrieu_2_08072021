@@ -340,7 +340,7 @@ a:link {
     border-bottom-left-radius: 0.8rem;
 }
 
-.popu-title { /*icône titre popu */
+.popu-aside h2 { /*icône titre popu */
     display: flex;
     justify-content: space-between;
 }
@@ -654,7 +654,6 @@ a:link {
     #filter-list > li {
         padding-bottom: 1rem;
         padding-right: 0.5rem;
-
     }
 
     /*------------------------------------------------------*/
@@ -699,7 +698,7 @@ a:link {
         margin-bottom: -2rem;
     }
 
-    .popu-title > h2 {
+    .popu-aside h2 {
         padding: 0;
     }
 
