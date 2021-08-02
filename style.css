@@ -92,7 +92,7 @@ a:link {
 
 #subscribe-button a:hover {
     color: #0055FC;
-
+    transition: all 0.4s ease;
 }
 
 /*--------------------------------------------------------*/
@@ -107,14 +107,15 @@ a:link {
 #search-bar [type=text] {
     font-family: "Raleway",serif;
     font-weight: bold;
-    width: 100%;
+    max-width: 100%;
     padding: 1rem;
     font-size: 1rem;
     border: 1px solid #f0f0f0;
     background: white;
 }
   
-#search-button {
+#search-bar [type=submit] {
+    position: relative;
     background: #0065FC;
     color: white;
     font-size: 17px;
@@ -127,7 +128,7 @@ a:link {
 
 #search-button:hover {
     background: #0055FC;
-
+    transition: all 0.4s ease;
 }
 
 ::placeholder {
@@ -187,9 +188,11 @@ a:link {
 }
 
 .filter-icon {
+    position: relative;
+    border: solid #DEEBFF;
     display: flex;
     justify-content: center;
-    margin: 0;
+    /* margin-left: -1px; */ /* sortir icon du bouton */
     padding: 1rem;
     width: 1rem;
     color: #0065FC;
@@ -198,7 +201,8 @@ a:link {
 }
 
 .filter-icon:hover {
-    padding-right: 0;
+    position: inherit;
+    margin-right: -1.5rem;
     transition: all 0.4s ease;
 }
 
@@ -211,8 +215,9 @@ a:link {
 }
 
 .filter-title:hover {
+    position: relative;
     color: #0065FC;
-    margin-left: -1rem;
+    margin-left: -1.5rem;
     transition: all 0.4s ease;
 }
 
@@ -261,6 +266,11 @@ a:link {
     padding: 2rem;
 }
 
+#house-box:hover {
+    background-color: #EFEFEF;
+    transition: all 5s ease;
+}
+
 #house-box h2 {
     margin-bottom: 2rem;
 }
@@ -270,7 +280,8 @@ a:link {
     border-radius: 1rem;
     background-color: white;
     border: 0.25rem solid white;
-    box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
+    box-shadow: 0 0px 10px 0 #dadada, 
+                0px 0px 30px 0px #dadada;
 }
 
 .house-card img {
@@ -324,6 +335,11 @@ a:link {
     border-radius: 1rem;
     padding: 2rem;
     gap: 2rem;
+}
+
+#popu-aside:hover {
+    background-color: #EFEFEF;
+    transition: all 5s ease;
 }
 
 .popu-card {
@@ -397,7 +413,8 @@ a:link {
 #activite-card a {
     border-radius: 1rem;
     background-color:white;
-    box-shadow: 0 0px 10px 0 #f0f0f0, 0px 0px 30px 0px #f0f0f0;
+    box-shadow: 0 0px 10px 0 #f0f0f0, 
+                0px 0px 30px 0px #f0f0f0;
     position: relative;
     height: auto;
 }
@@ -562,7 +579,6 @@ a:link {
         grid-template-columns: repeat(2,1fr);
         margin-bottom: 2rem;
         gap: 0;
-
     }
 
     #menu a:hover {
@@ -575,7 +591,7 @@ a:link {
         padding-top: 0;
         width: 100%;
         height: 2rem; /*espacement border et text */
-        border-bottom: 4px solid #f0f0f0;
+        border-bottom: 4px solid #F2F2F2;
     }
 
     #house a {
@@ -594,7 +610,6 @@ a:link {
         grid-area: 2 / 2;
         padding-top: 0;
         border-bottom: 4px solid #f0f0f0;
-        /* border: solid orange; */
     }
 
     #activite a {
@@ -652,6 +667,8 @@ a:link {
 
     #filter {
         display: block;
+        margin-right: 2rem;
+        padding-right: 2rem;
     }
 
     #filter h4 {
@@ -669,11 +686,11 @@ a:link {
 
     /*------------------------------------------------------*/
 
-    /* #info {
+    #info {
         padding-left: 2rem;
         padding-right: 2rem;
         gap: 0;
-    } */
+    } 
 
     #info i {
         position: absolute;
@@ -690,6 +707,10 @@ a:link {
         background: none;
     }
 
+    #house-box:hover {
+        background: none;
+    }
+
     #house-box > h2 {
         padding: 0;
         margin-bottom: 2rem;
@@ -703,6 +724,8 @@ a:link {
     /*------------------------------------------------------*/
 
     #popu-aside {
+        display: grid;
+        grid-template-columns: 1fr;
         border-radius: 0;
         order: -1;
         background: linear-gradient(180deg, #f2f2f2 0%, 
@@ -714,16 +737,30 @@ a:link {
         padding: 0;
     }
 
+    .popu-card {
+        min-width: 0;
+    }
+
     /*------------------------------------------------------*/
+
+    #activite-box {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: -1.5rem;
+    }
+
+    #activite-box h2 {
+        padding-left: 0;
+    }
 
     #activite-card {
         display: block;
-        padding: 2rem;
     }
 
     #activite-card > a {
         height: 14rem;
         margin-bottom: 2rem;
+
     }
 
     #act-un img {
