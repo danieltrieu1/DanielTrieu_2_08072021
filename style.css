@@ -8,13 +8,15 @@ body {
     padding-left: 2rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1400px;
+    max-width: 1360px;
+    scroll-behavior: smooth;
 }
 
-ul, p, div {
+ul, p, div, a {
     font-family: "Raleway",serif;
     margin: 0;
     list-style: none;
+    color: black;
 }
 
 h2 {
@@ -35,7 +37,7 @@ a:link {
     width: 6rem;
 }
 
-.title h2 {
+#title h2 {
     margin-bottom: 0.5rem;
 }
 
@@ -51,31 +53,27 @@ a:link {
     margin-top: 2rem;
 }
 
-#houses {
+#house {
     grid-area: 1 / 3;
     padding-top: 2rem;
 }
 
-#houses a {
+#house a {
     color: black;
 }
 
-#houses a:hover {
+#house a:hover {
     padding-top: 1.8rem;
     color: #0065FC;
     border-top: 4px solid #0065FC;
 }
 
-#activites {
+#activite {
     grid-area: 1 / 4;
     padding-top: 2rem;
 }
 
-#activites a {
-    color: black;
-}
-
-#activites a:hover {
+#activite a:hover {
     padding-top: 1.8rem;
     color: #0065FC;
     border-top: 4px solid #0065FC;
@@ -99,14 +97,14 @@ a:link {
 
 /*--------------------------------------------------------*/
 
-.search-bar {
+#search-bar {
     display: grid;
     grid-template-columns: 3.2rem 14rem 8rem 1fr;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
-.search-bar [type=text] {
+#search-bar [type=text] {
     font-family: "Raleway",serif;
     font-weight: bold;
     width: 100%;
@@ -116,18 +114,18 @@ a:link {
     background: white;
 }
   
-.search-button {
+#search-button {
     background: #0065FC;
     color: white;
     font-size: 17px;
     border: none;
     border-left: none; /* mini marge invisible du bouton */
-    border-top-right-radius: 2vh;
-    border-bottom-right-radius: 2vh;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     cursor: pointer;
 }
 
-.search-button:hover {
+#search-button:hover {
     background: #0055FC;
 
 }
@@ -138,29 +136,29 @@ a:link {
     color: black;
 }
 
-.marker-icon {
+#marker-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     background-color: #F2F2F2;
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius: 2vh;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 
-.search-button i {
+#search-button i {
     display: none;
 }
 
 /*--------------------------------------------------------*/
 
-.filter {
+#filter {
     font-family: "raleway",sans-serif;
     font-weight: bold;
     display: flex;
 }
 
-.filter > p {
+#filter h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: -1.5rem;
@@ -176,8 +174,16 @@ a:link {
 .filter-container {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #DEEBFF;
     border-radius: 2rem;
+}
+
+.filter-container:hover {
+    border-radius: 1rem;
+    background: #DEEBFF;
+    transition: all 0.4s ease;
+    color: #0065FC;
+    border: 2px solid #DEEBFF;
 }
 
 .filter-icon {
@@ -188,13 +194,12 @@ a:link {
     width: 1rem;
     color: #0065FC;
     background-color: #DEEBFF;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
-.filter-container:hover {
-    color: #0065FC;
-    border: 2px solid #DEEBFF;
-
+.filter-icon:hover {
+    padding-right: 0;
+    transition: all 0.4s ease;
 }
 
 .filter-title {
@@ -205,9 +210,15 @@ a:link {
     padding-left: 0.7rem;
 }
 
+.filter-title:hover {
+    color: #0065FC;
+    margin-left: -1rem;
+    transition: all 0.4s ease;
+}
+
 /*--------------------------------------------------------*/
 
-.info {
+#info {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -216,7 +227,7 @@ a:link {
     gap: 5px;
 }
 
-.info i {
+#info i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,125 +239,125 @@ a:link {
     color: #0065FC;
 }
 
-.info p {
+#info p {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 /*------------------------ main ------------------------- */
 
-.house-container {
+#house-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-bottom: 3rem ;
+    margin-bottom: 2rem;
 }
 
-.house-box { 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #F2F2F2;
+#house-box {
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
     border-radius: 1rem;
     padding: 2rem;
-    gap: 2rem;
-    height: auto;
 }
 
-.house-box > h2 {
-    display: grid;
-    grid-area: 1 / 1 / 1 / 4;
+#house-box h2 {
+    margin-bottom: 2rem;
 }
 
-.house-box > a {
+.house-card {
+    height: 11rem;
     border-radius: 1rem;
     background-color: white;
     border: 0.25rem solid white;
     box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
-    cursor: pointer;
 }
 
-.house-box > a:hover {
-    transition: transform 1s;
-    transform: scale(0.95);
-}
-
-.house-card > img {
-    height: 6rem;
+.house-card img {
+    height: 60%;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
 }
 
-.house-card > a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.house-card:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
+
+#house-cardbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 2rem;
 }
 
 .house-subtitle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.5rem;
+    line-height: 1.2rem;
+    margin-left: 10px;
+    margin-top: 4px;
 }
 
 .rate-star {
     display: flex;
-    padding-top: 1rem;
+    margin-top: 3px;
 }
 
-
-.showmore {
-    color: black;
-    font-weight: bold;
+#house-box h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+    margin-bottom: 0;
 }
 
 /*------------------------------------------------------*/
 
-.popu-aside {
+#popu-aside {
     
-    display: grid;
-    grid-template-rows: auto repeat(3,1fr); 
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    display: flex;
+    flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 1rem;
-    margin: 0;
     padding: 2rem;
     gap: 2rem;
 }
 
-.popu-aside > a {
-    background-color: white;
-    border: 0.25rem solid white;
-    box-shadow: 0 0px 10px 0 #dadada, 0px 0px 30px 0px #dadada;
-    border-radius: 1rem;
-    height: 8rem;
-    cursor: pointer;
-}
-
 .popu-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr 2fr;
+    background-color: white;
+    border: 0.25rem solid white;
+    box-shadow: 0 0px 10px 0 #dadada, 
+                0px 0px 30px 0px #dadada;
+    border-radius: 1rem;
+    height: 8rem;
+    min-width: 20rem;
+    /* width: 20rem; */
 }
 
-.popu-card > img {
-    grid-area: 1 / 1 / 1 / 1 ;
+.popu-card:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
+
+.popu-card img {
     object-fit: cover;
     height: 8rem;
-    width: 100%;
+    width: 8rem;
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
 }
 
-.popu-aside h2 { /*icône titre popu */
+#popu-aside h2 { /*icône titre popu */
     display: flex;
     justify-content: space-between;
 }
 
 .popu-subtitle {
-    grid-area: 1 / 2 / 1 / 2 ;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -354,18 +365,21 @@ a:link {
 
 .popu-rate-star {
     display: flex;
-    grid-area: 3 /2;
     margin-top: auto;
-}
-
-.popu-aside > a:hover {
-    transition: transform 1s;
-    transform: scale(0.95);
 }
 
 /*------------------------------------------------------*/
 
-.activite {
+#activite-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#activite-box h2 {
+    padding-top: 1rem;
+}
+
+#activite-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 10rem 1fr 10rem;
@@ -375,18 +389,17 @@ a:link {
     gap: 2rem;
 }
 
-.activite > a {
+#activite-card a:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
+
+#activite-card a {
     border-radius: 1rem;
     background-color:white;
     box-shadow: 0 0px 10px 0 #f0f0f0, 0px 0px 30px 0px #f0f0f0;
-    /* border: solid red; */
     position: relative;
     height: auto;
-}
-
-.activite > a:hover {
-    transition: transform 1s;
-    transform: scale(0.95);
 }
 
 #act-un {
@@ -395,7 +408,7 @@ a:link {
     grid-area: 1 / 1 / 4 / 1;
 } 
 
-#act-un > img {
+#act-un img {
     position: absolute;
     object-fit: cover;
     height: 21rem;
@@ -410,7 +423,7 @@ a:link {
     grid-area: 1 / 2 / 3 / 2;
 } 
 
-#act-deux > img {
+#act-deux img {
     position: absolute;
     object-fit: cover;
     height: 9rem;
@@ -425,7 +438,7 @@ a:link {
     grid-area: 3 / 2 / 4 / 2;
 } 
 
-#act-trois > img {
+#act-trois img {
     position: absolute;
     object-fit: cover;
     height: 7rem;
@@ -441,7 +454,7 @@ a:link {
     position: relative;
 } 
 
-#act-quatre > img {
+#act-quatre img {
     position: absolute;
     object-fit: cover;
     height: 21rem;
@@ -456,7 +469,7 @@ a:link {
     grid-area: 1 / 4 / 1 / 5;
 } 
 
-#act-cinq > img {
+#act-cinq img {
     position: absolute;
     object-fit: cover;
     height: 7rem;
@@ -472,7 +485,7 @@ a:link {
     position: relative;
 } 
 
-#act-six > img {
+#act-six img {
     position: absolute;
     object-fit: cover;
     height: 9rem;
@@ -488,12 +501,12 @@ a:link {
     flex-direction: column;
     justify-content:center ;    
     grid-area: 2 / 1 / 2 / 2;
-    padding-left: 2vh;
+    padding-left: 1rem;
 }
 
 /*------------------------------------------------------*/
 
-.footer {
+#footer {
     position: absolute;
     left: 0;
     background-color: #F2F2F2;
@@ -501,29 +514,23 @@ a:link {
     line-height: 2rem; /* espacements lignes */
 }
 
-.footer-info {
+#footer-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    max-width: 1400px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1360px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    gap: 2rem;
 }
 
-.footer-info > p {
-    font-family: "raleway",sans-serif;
-    font-weight: bold;
+#footer h4 {
+    margin: 0;
 }
 
-.footer-info a {
-    color: black;
-}
-
-.footer ul {
+#footer ul {
     padding-left: 0;
 }
 
@@ -563,7 +570,7 @@ a:link {
         border-top: none;
     }
 
-    #houses {
+    #house {
         grid-area: 2 / 1;
         padding-top: 0;
         width: 100%;
@@ -571,7 +578,7 @@ a:link {
         border-bottom: 4px solid #f0f0f0;
     }
 
-    #houses a {
+    #house a {
         display: flex;
         justify-content: center;
         margin-top: 0;
@@ -579,18 +586,18 @@ a:link {
         width: 100%;
     }
 
-    #houses:hover {
+    #house:hover {
         border-bottom: 4px solid #0065FC;
     }
 
-    #activites {
+    #activite {
         grid-area: 2 / 2;
         padding-top: 0;
         border-bottom: 4px solid #f0f0f0;
         /* border: solid orange; */
     }
 
-    #activites a {
+    #activite a {
         display: flex;
         justify-content: center;
         margin-top: 0;
@@ -598,7 +605,7 @@ a:link {
         width: 100%;
     }
 
-    #activites:hover {
+    #activite:hover {
         border-bottom: 4px solid #0065FC;
     }
 
@@ -612,7 +619,7 @@ a:link {
 
     /*------------------------------------------------------*/
 
-    .search-bar {
+    #search-bar {
         grid-template-columns: 3.2rem 1fr 3.5rem auto;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -622,129 +629,134 @@ a:link {
         font-size: 0;
     }
 
-    .search-button {
-        border-top-left-radius: 2vh;
-        border-bottom-left-radius: 2vh;
+    #search-button {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
 
-    .search-button:hover {
+    #search-button:hover {
         background-color: #0055FC;
+        transition: all 0.4s ease;
     }
 
-    .search-button > span {
+    #search-button span {
         display: none;
     }
 
-    .search-button i {
+    #search-button i {
         display: flex;
         justify-content: center;
     }
 
     /*------------------------------------------------------*/
 
-    .filter {
+    #filter {
         display: block;
     }
 
-    .filter > ul {
+    #filter h4 {
         padding-left: 2rem;
-        padding-right: 2rem;
     }
 
-    #filter-list > li {
+    #filter ul {
+        padding-left: 2rem;
+    }
+
+    #filter-list li {
         padding-bottom: 1rem;
         padding-right: 0.5rem;
     }
 
     /*------------------------------------------------------*/
 
-    .info {
+    /* #info {
         padding-left: 2rem;
         padding-right: 2rem;
         gap: 0;
-    }
+    } */
 
-    .info i {
+    #info i {
         position: absolute;
     }
 
     /*------------------------------------------------------*/
 
-    .house-container {
+    #house-container {
         grid-template-columns: 1fr;
     }
 
-    .house-box {
+    #house-box {
         display: block;
         background: none;
     }
 
-    .house-box > h2 {
+    #house-box > h2 {
         padding: 0;
         margin-bottom: 2rem;
     }
 
-    .house-card {
+    #house-card {
         display: block;
         margin-bottom: 2rem;
     }
 
     /*------------------------------------------------------*/
 
-    .popu-aside {
+    #popu-aside {
         border-radius: 0;
         order: -1;
-        background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 50%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, #f2f2f2 0%, 
+                  #f2f2f2 50%, #ffff 100%);
         margin-bottom: -2rem;
     }
 
-    .popu-aside h2 {
+    #popu-aside h2 {
         padding: 0;
     }
 
     /*------------------------------------------------------*/
 
-    .activite {
+    #activite-card {
         display: block;
         padding: 2rem;
     }
 
-    .activite > a {
+    #activite-card > a {
         height: 14rem;
         margin-bottom: 2rem;
     }
 
-    #act-un > img {
+    #act-un img {
         height: 11rem;
     }
 
-    #act-deux > img {
+    #act-deux img {
         height: 11rem;
     }
 
-    #act-trois > img {
+    #act-trois img {
         height: 11rem;
     }
 
-    #act-quatre > img {
+    #act-quatre img {
         height: 11rem;
     }
 
-    #act-cinq > img {
+    #act-cinq img {
         height: 11rem;
     }
 
-    #act-six > img {
+    #act-six img {
         height: 11rem;
     }
 
     /*------------------------------------------------------*/
 
-    .footer {
+    #footer {
         margin-top: -1rem;
     }
 
-    .footer-info{
+    #footer-info {
         display: flex;
         flex-direction: column;
     }
