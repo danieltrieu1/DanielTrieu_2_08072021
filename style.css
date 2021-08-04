@@ -660,10 +660,6 @@ a:link {
         overflow: hidden;
     }
 
-    ::placeholder {
-        overflow-x: visible;
-    }
-
     #search-button {
         font-size: 17px;
         width: 53px;
@@ -684,16 +680,6 @@ a:link {
     #search-button i {
         display: flex;
         justify-content: center;
-    }
-
-    .fa-map-marker-alt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 50px;
-        background-color: #F2F2F2;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
     }
 
     /*------------------------------------------------------*/
