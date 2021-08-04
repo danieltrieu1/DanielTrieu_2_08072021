@@ -110,7 +110,6 @@ a:link {
     padding: 1rem;
     width: 12rem;
     border: 1px solid #F2F2F2;
-
 }
 
 ::placeholder {
@@ -141,11 +140,10 @@ a:link {
 
 
 .fa-map-marker-alt {
+    z-index: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
