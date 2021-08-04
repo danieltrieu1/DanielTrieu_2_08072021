@@ -140,7 +140,7 @@ a:link {
 }
 
 
-#search-bar i {
+.fa-map-marker-alt {
     display: flex;
     align-items: center;
     justify-content: center;
