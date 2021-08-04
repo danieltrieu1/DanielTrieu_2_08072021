@@ -144,6 +144,7 @@ a:link {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
@@ -678,6 +679,8 @@ a:link {
     }
 
     #search-button i {
+        position: relative;
+        background: none;
         display: flex;
         justify-content: center;
     }
