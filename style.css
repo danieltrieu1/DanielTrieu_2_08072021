@@ -142,6 +142,9 @@ a:link {
 
 .fa-map-marker-alt {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
