@@ -168,7 +168,7 @@ a:link {
     margin-right: -1.5rem;
 }
 
-#filter-list > li {
+#filter li {
     display: inline-block;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -184,31 +184,16 @@ a:link {
                 background-color 0.4s ease-in;
 }
 
-.filter-container:hover {
-    border-radius: 1rem;
-    background: #DEEBFF;
-    transition: all 0.4s ease;
-    color: #0065FC;
-    border: 2px solid #DEEBFF;
-}
-
 .filter-icon {
     position: relative;
     border: solid #DEEBFF;
     display: flex;
     justify-content: center;
-    /* margin-left: -1px; */ /* sortir icon du bouton */
     padding: 1rem;
     width: 1rem;
     color: #0065FC;
     background-color: #DEEBFF;
     border-radius: 100%;
-    transition: all 0.4s ease;
-}
-
-.filter-icon:hover {
-    position: inherit;
-    margin-right: -1.5rem;
     transition: all 0.4s ease;
 }
 
@@ -222,8 +207,19 @@ a:link {
     transition: all 0.4s ease;
 }
 
-.filter-title:hover {
-    position: relative;
+.filter-container:hover {
+    border-radius: 1rem;
+    background: #DEEBFF;
+    transition: all 0.4s ease;
+    color: #0065FC;
+    border: 2px solid #DEEBFF;
+}
+
+.filter-container:hover .filter-icon {
+    transition: all 0.4s ease;
+}
+
+.filter-container:hover .filter-title {
     color: #0065FC;
     margin-left: -1.5rem;
     transition: all 0.4s ease;
@@ -701,7 +697,7 @@ a:link {
         padding-left: 2rem;
     }
 
-    #filter-list li {
+    #filter li {
         padding-bottom: 1rem;
         padding-right: 0.5rem;
     }
