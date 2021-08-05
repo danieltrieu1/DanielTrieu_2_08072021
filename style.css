@@ -138,6 +138,9 @@ a:link {
     cursor: pointer;
 }
 
+.fas {
+    display: flex;
+}
 
 .fa-map-marker-alt {
     display: flex;
