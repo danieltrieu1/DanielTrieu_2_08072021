@@ -147,6 +147,8 @@ a:link {
 }
 
 .fa-map-marker-alt {
+    z-index: 1;
+    clear: inherit;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
