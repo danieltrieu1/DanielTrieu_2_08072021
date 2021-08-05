@@ -25,7 +25,7 @@ h2 {
     margin: 0;
 }
 
-.fas {
+.fa, .fab, .fad, .fal, .far, .fas {
     display: flex;
     align-items: center;
     justify-content: center;
