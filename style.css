@@ -25,12 +25,6 @@ h2 {
     margin: 0;
 }
 
-.fa, .fab, .fad, .fal, .far, .fas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 a:link {
     text-decoration-line: none;
 }
@@ -144,9 +138,13 @@ a:link {
     cursor: pointer;
 }
 
-.fa-map-marker-alt {
-    -webkit-font-smoothing: none;
-    line-height: none;
+.fas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-marker {
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
@@ -210,6 +208,7 @@ a:link {
 }
 
 .filter-icon:hover {
+    position: inherit;
     margin-right: -1.5rem;
     transition: all 0.4s ease;
 }
@@ -225,6 +224,7 @@ a:link {
 }
 
 .filter-title:hover {
+    position: relative;
     color: #0065FC;
     margin-left: -1.5rem;
     transition: all 0.4s ease;
@@ -241,7 +241,10 @@ a:link {
     gap: 5px;
 }
 
-.fa-info {
+#info i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 7px;
     height: 7px;
     width: 7px;
@@ -712,7 +715,7 @@ a:link {
         gap: 0;
     } 
 
-    .fa-info {
+    #info i {
         position: absolute;
     }
 
