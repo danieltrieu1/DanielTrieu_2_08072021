@@ -145,6 +145,8 @@ a:link {
 }
 
 .fa-map-marker-alt {
+    -webkit-font-smoothing: none;
+    line-height: none;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
