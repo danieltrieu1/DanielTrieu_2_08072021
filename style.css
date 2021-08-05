@@ -145,14 +145,12 @@ a:link {
 }
 
 .fa-map-marker-alt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     text-align: center;
+    vertical-align: middle;
 }
 
 #search-button i {
