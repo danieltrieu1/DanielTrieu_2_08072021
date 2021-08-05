@@ -138,13 +138,10 @@ a:link {
     cursor: pointer;
 }
 
-.fas {
-    display: flex;
+.fa-map-marker-alt {
+    display: flex !important;
     justify-content: center;
     align-items: center;
-}
-
-.fa-map-marker-alt {
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
