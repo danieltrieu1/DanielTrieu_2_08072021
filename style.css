@@ -142,17 +142,17 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
-    width: auto;
 }
 
 .fa-map-marker-alt {
-    z-index: 1;
-    clear: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    text-align: center;
 }
 
 #search-button i {
