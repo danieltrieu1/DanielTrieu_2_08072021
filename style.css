@@ -25,6 +25,12 @@ h2 {
     margin: 0;
 }
 
+.fas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a:link {
     text-decoration-line: none;
 }
@@ -138,15 +144,7 @@ a:link {
     cursor: pointer;
 }
 
-.fas {
-    display: flex;
-}
-
 .fa-map-marker-alt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clear: left;
     width: 50px;
     background-color: #F2F2F2;
     border-top-left-radius: 1rem;
@@ -210,7 +208,6 @@ a:link {
 }
 
 .filter-icon:hover {
-    position: inherit;
     margin-right: -1.5rem;
     transition: all 0.4s ease;
 }
@@ -226,7 +223,6 @@ a:link {
 }
 
 .filter-title:hover {
-    position: relative;
     color: #0065FC;
     margin-left: -1.5rem;
     transition: all 0.4s ease;
@@ -243,10 +239,7 @@ a:link {
     gap: 5px;
 }
 
-#info i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fa-info {
     padding: 7px;
     height: 7px;
     width: 7px;
@@ -717,7 +710,7 @@ a:link {
         gap: 0;
     } 
 
-    #info i {
+    .fa-info {
         position: absolute;
     }
 
