@@ -58,10 +58,6 @@ a:link {
     padding-top: 2rem;
 }
 
-#house a {
-    color: black;
-}
-
 #house a:hover {
     padding-top: 1.8rem;
     color: #0065FC;
@@ -207,6 +203,8 @@ a:link {
     transition: all 0.4s ease;
 }
 
+/* début animations filtres */
+
 .filter-container:hover {
     border-radius: 1rem;
     background: #DEEBFF;
@@ -268,11 +266,12 @@ a:link {
     background: #f2f2f2;
     border-radius: 1rem;
     padding: 2rem;
+    transition: all 0.4s ease;
 }
 
 #house-box:hover {
-    background-color: #EFEFEF;
-    transition: all 5s ease;
+    background-color: #E9E9E9;
+    transition: all 3s ease;
 }
 
 #house-box h2 {
@@ -298,10 +297,6 @@ a:link {
     border-top-right-radius: 0.8rem;
 }
 
-.house-card:hover {
-    transition: transform 1s;
-    transform: scale(0.95);
-}
 
 #house-cardbox {
     display: grid;
@@ -331,6 +326,15 @@ a:link {
     margin-bottom: 0;
 }
 
+.house-card:hover {
+    transition: transform 1s;
+    transform: scale(0.95);
+}
+
+#showmore {
+    cursor: pointer;
+}
+
 /*------------------------------------------------------*/
 
 #popu-aside {
@@ -340,13 +344,13 @@ a:link {
     background-color: #F2F2F2;
     border-radius: 1rem;
     padding: 2rem;
-    /* max-width: min-content; */
+    transition: all 0.4s ease;
     gap: 2rem;
 }
 
 #popu-aside:hover {
-    background-color: #EFEFEF;
-    transition: all 5s ease;
+    background-color: #E9E9E9;
+    transition: all 3s ease;
 }
 
 .popu-card {
@@ -361,8 +365,6 @@ a:link {
     height: 8rem;
     min-width: 20rem;
     overflow: hidden;
-    /* height: auto; */
-    /* min-width: 20rem; */
 }
 
 .popu-card:hover {
