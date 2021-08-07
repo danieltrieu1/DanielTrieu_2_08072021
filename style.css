@@ -669,8 +669,8 @@ a:link {
 
     #filter {
         display: block;
-        margin-right: 1rem;
-        padding-right: auto;
+        margin-right: 0;
+        padding-right: 0;
     }
 
     #filter h4 {
@@ -681,11 +681,6 @@ a:link {
 
     #filter ul {
         padding-left: 1rem;
-    }
-
-    #filter li {
-        padding-bottom: 1rem;
-        padding-right: 0.5rem;
     }
 
     /*------------------------------------------------------*/
