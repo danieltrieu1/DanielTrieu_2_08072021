@@ -584,7 +584,6 @@ a:link {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         margin-bottom: -1rem;
-
     }
 
     #logo {
@@ -672,13 +671,13 @@ a:link {
         display: block;
         margin-right: 1rem;
         padding-right: auto;
-        
     }
 
     #filter h4 {
         padding-left: 1rem;
+        margin-right: 0;
     }
-
+    
     #filter ul {
         padding-left: 1rem;
     }
@@ -711,6 +710,7 @@ a:link {
         background: none;
         padding-left: 1rem;
         padding-right: 1rem;
+        border-radius: none;
     }
 
     #house-box:hover {
@@ -724,10 +724,6 @@ a:link {
 
     #house-cardbox {
         gap: 1rem;
-    }
-
-    #house-card {
-        display: block;
     }
 
     /*------------------------------------------------------*/
@@ -746,7 +742,9 @@ a:link {
     }
 
     #popu-aside h2 {
+        padding-left: 0;
         padding-bottom: 1rem;
+
     }
 
     .popu-card {
@@ -784,12 +782,21 @@ a:link {
     /*------------------------------------------------------*/
 
     #footer {
-        margin-top: -2rem;
+        margin-top: -1rem;
     }
 
     #footer-info {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2rem;    
     }
+
+    #footer ul {
+        margin-left: -1rem;
+    }
+
+    #footer h4 {
+        margin-left: -1rem; 
+    }
+
 }
