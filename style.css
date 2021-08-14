@@ -705,6 +705,7 @@ a:link {
     #house-box {
         display: block;
         background: none;
+        padding-top: 4rem;
         padding-left: 1rem;
         padding-right: 1rem;
         border-radius: none;
@@ -735,6 +736,7 @@ a:link {
         max-width: none;
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-bottom: 0;
         gap: 0.5rem;
     }
 
